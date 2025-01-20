@@ -1,3 +1,7 @@
+import Announcements from "@/components/Announcements";
+import AttendanceChart from "@/components/AttendanceCharts";
+import CountChart from "@/components/CountChart";
+import EventCalendar from "@/components/EventCalender";
 import UserCard from "@/components/UserCard";
 
 export default function AdminPage() {
@@ -7,7 +11,7 @@ export default function AdminPage() {
       <div className="w-full lg:w-2/3 flex flex-col gap-8">
         {/* USER CARDS */}
         <div className="flex gap-4 justify-between flex-wrap">
-          <UserCard type="murid" />
+          <UserCard type="siswa" />
           <UserCard type="guru" />
           <UserCard type="orang tua" />
           <UserCard type="staf" />
@@ -16,11 +20,11 @@ export default function AdminPage() {
         <div className="flex gap-4 flex-col lg:flex-row">
           {/* COUNT CHART */}
           <div className="w-full lg:w-1/3 h-[450px]">
-            {/* <CountChart /> */}
+            <CountChart />
           </div>
           {/* ATTENDANCE CHART */}
           <div className="w-full lg:w-2/3 h-[450px]">
-            {/* <AttendanceChart /> */}
+            <AttendanceChart />
           </div>
         </div>
         {/* BOTTOM CHART */}
@@ -28,8 +32,8 @@ export default function AdminPage() {
       </div>
       {/* RIGHT */}
       <div className="w-full lg:w-1/3 flex flex-col gap-8">
-        {/* <EventCalendar />
-        <Announcements/> */}
+        <EventCalendar />
+        <Announcements />
       </div>
     </div>
   );
